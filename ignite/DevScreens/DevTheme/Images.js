@@ -2,6 +2,8 @@
 const images = {
   igniteClear: require('../Images/ignite-logo-transparent.png'),
   tileBg: require('../Images/tile_bg.png'),
+  bglogin: require('../Images/bg.jpg'),
+  logoLogin: require('../Images/Logo.png'),
   background: require('../Images/BG.png'),
   api: require('../Images/Icons/icon-api-testing.png'),
   components: require('../Images/Icons/icon-components.png'),
@@ -14,6 +16,7 @@ const images = {
   hamburger: require('../Images/Icons/hamburger.png'),
   backButton: require('../Images/Icons/back-button.png'),
   closeButton: require('../Images/Icons/close-button.png')
+
 }
 
 export default images
