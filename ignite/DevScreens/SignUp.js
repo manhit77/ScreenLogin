@@ -22,12 +22,20 @@ class BackgroundImage extends React.Component {
 
 
 class SignUp extends React.Component {
+    constructor(props) {
+    super(props);
+    this.state = { LastName: '' };
+    this.state = { FirstName: '' };
+    this.state = { Username: '' };
+    this.state = { Password: '' };
+  }
     openSignIn = () => {
     this.props.navigation.navigate('SignIn')
   }
  LG(){
      return(
-       <View style={styles.backgroundColor}>
+           <ScrollView style={styles.scroll}>
+      {/* <View style={styles.backgroundColor}> */}
          <View style={styles.rows}>   
          
             <View style={styles.rowslogo}>
@@ -39,30 +47,34 @@ class SignUp extends React.Component {
             <View style={styles.rowsform} >
                 <View style={styles.rowsinput}>
                             <TextInput
+                             placeholder='First Name'
                                 style={styles.input}
-                                onChangeText={(text) => this.setState({text})}
-                                    value={"First Name"}
+                                onChangeText={(FirstName) => this.setState({FirstName})}
+                                    value={this.state.FirstName}
                             />
                         </View> 
                         <View style={styles.rowsinput}>
                             <TextInput
+                            placeholder='Last Name'
                                 style={styles.input}
-                                onChangeText={(text) => this.setState({text})}
-                                    value={"Last Name"}
+                                onChangeText={(LastName) => this.setState({LastName})}
+                                    value={this.state.LastName}
                             />
                         </View> 
                     <View style={styles.rowsinput}>
                             <TextInput
+                             placeholder='Username'
                                 style={styles.input}
-                                onChangeText={(text) => this.setState({text})}
-                                    value={"Username"}
+                                onChangeText={(Username) => this.setState({Username})}
+                                    value={this.state.Username}
                             />
                         </View> 
                     <View style={styles.rowsinput}>
                             <TextInput
+                            placeholder='Password'
                                 style={styles.input}
-                                onChangeText={(text) => this.setState({text})}
-                                    value={"Password"}
+                                onChangeText={(Password) => this.setState({Password})}
+                                    value={this.state.Password}
                             />
                     </View>
                     
@@ -90,8 +102,9 @@ class SignUp extends React.Component {
                     </View>          
             </View>
 
-         </View>    
-         </View>
+         </View>   
+         </ScrollView> 
+        
      )
  }
        

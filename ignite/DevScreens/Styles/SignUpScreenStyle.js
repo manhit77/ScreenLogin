@@ -7,7 +7,15 @@ export default StyleSheet.create({
     marginBottom: 0,
     // paddingTop: Metrics.section
   },
- 
+  scroll: {
+       paddingTop:'25%',
+    flex: 1,
+    width: null,
+        height: null,
+     backgroundColor: 'rgba(0,0,0,.5)',
+     
+    //  paddingBottom: Metrics.baseMargin
+  },
   backgroundImage:{
        flex: 1,
         width: null,
@@ -27,8 +35,9 @@ export default StyleSheet.create({
         backgroundColor: 'rgba(0,0,0,.5)',
     },
     rows:{
+        
          flex:1,
-        paddingTop: 0,
+        paddingTop: 10,
         alignItems: 'center',
         flexDirection:"column"
     },
@@ -36,6 +45,7 @@ export default StyleSheet.create({
          justifyContent: 'center',
         alignItems: 'center',
         flex:3,
+         paddingBottom:'20%',
       
     },
     rowsform:{
@@ -64,7 +74,7 @@ export default StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: '17%',
+        marginTop: '15%',
     },     
     rowsloginwith:{
         justifyContent: 'space-between',
@@ -75,7 +85,7 @@ export default StyleSheet.create({
     },     
     input:{
         color: 'black',
-        padding: 20,
+        padding: '2%',
         backgroundColor:'rgba(244,244,248,.5)',
         width: '101%',
         borderRadius: 2,

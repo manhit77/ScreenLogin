@@ -21,6 +21,12 @@ class BackgroundImage extends React.Component {
 
 
 class SignIn extends React.Component {
+    constructor(props) {
+    super(props);
+    this.state = { Username: '' };
+    this.state = { Password: '' };
+  }
+
      openSignUp = () => {
 //          Alert.alert(
 //   'Alert Title')
@@ -28,7 +34,9 @@ class SignIn extends React.Component {
   }
  LG(){
      return(
-        <View style={styles.backgroundColor}>
+         
+        // <View style={styles.backgroundColor}>
+         <ScrollView style={styles.scroll}>
          <View style={styles.rows}>   
  
             <View style={styles.rowslogo}>
@@ -40,16 +48,19 @@ class SignIn extends React.Component {
             <View style={styles.rowsform} >
                     <View style={styles.rowsinput}>
                             <TextInput
+                            placeholder='Username'
                                 style={styles.input}
-                                onChangeText={(text) => this.setState({text})}
-                                    value={"Username"}
+                                onChangeText={(Username) => this.setState({Username})}
+                                   value={this.state.Username}
+
                             />
                         </View> 
                     <View style={styles.rowsinput}>
                             <TextInput
+                             placeholder='Password'
                                 style={styles.input}
-                                onChangeText={(text) => this.setState({text})}
-                                    value={"Password"}
+                                onChangeText={(Password) => this.setState({Password})}
+                                   value={this.state.Password}
                             />
                     </View>
                     <View  style={styles.rowsinput}>
@@ -78,14 +89,18 @@ class SignIn extends React.Component {
             </View>
 
          </View>    
-         </View>
+         </ScrollView>
+       //  </View>
      )
  }
        
   render () {
     return (
+        
         <BackgroundImage>
+               
             {this.LG()}
+           
             </BackgroundImage>
        
     )

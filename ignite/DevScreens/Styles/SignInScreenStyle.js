@@ -3,11 +3,18 @@ import { Metrics, Colors, Fonts, ApplicationStyles } from '../DevTheme/'
 
 export default StyleSheet.create({
   ...ApplicationStyles.screen,
-  container: {
-    marginBottom: 0,
-    // paddingTop: Metrics.section
+//   container: {
+//     marginBottom: 0,
+//     // paddingTop: Metrics.section
+//   },
+ scroll: {
+    flex: 1,
+    width: null,
+        height: null,
+     backgroundColor: 'rgba(0,0,0,.5)',
+     
+    //  paddingBottom: Metrics.baseMargin
   },
- 
   backgroundImage:{
        flex: 1,
         width: null,
@@ -21,6 +28,7 @@ text: {
         fontSize: 32
     },
     backgroundColor:{
+       
         flex: 1,
         width: null,
         height: null,
@@ -28,7 +36,7 @@ text: {
     },
     rows:{
          flex:1,
-        paddingTop: 0,
+        paddingTop:'40%',
         alignItems: 'center',
         flexDirection:"column"
     },
@@ -36,7 +44,8 @@ text: {
          justifyContent: 'center',
         alignItems: 'center',
         flex:5,
-      
+         
+      paddingBottom:'20%',
     },
     rowsform:{
          flex:5,
@@ -62,7 +71,7 @@ text: {
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: '10%',
+        marginTop: '20%',
     },     
     rowsloginwith:{
         justifyContent: 'space-between',
@@ -73,7 +82,7 @@ text: {
     },     
     input:{
         color: 'black',
-        padding: 20,
+         padding: 10,
         backgroundColor:'rgba(244,244,248,.5)',
         width: '101%',
         borderRadius: 2,
